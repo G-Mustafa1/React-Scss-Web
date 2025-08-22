@@ -1,0 +1,92 @@
+@use "variables" as *;
+@use "mixins";
+
+.footer {
+    background-color: rgb(0, 166, 255);
+    //   background: linear-gradient(135deg, $secondary-color, $primary-color);
+    color: white;
+    padding: 3rem 2rem 1rem;
+    margin-top: 3rem;
+
+    .footer-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        .footer-about {
+            h3 {
+                font-size: 1.8rem;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+        }
+
+        .footer-links {
+            h4 {
+                margin-bottom: 1rem;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+
+                li {
+                    margin-bottom: 0.5rem;
+
+                    a {
+                        color: white;
+                        text-decoration: none;
+                        transition: 0.3s;
+
+                        &:hover {
+                            color: #003366;
+                            /* navy blue */
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer-social {
+            h4 {
+                margin-bottom: 1rem;
+            }
+
+            .social-icons {
+                display: flex;
+                gap: 1rem;
+
+                a {
+                    color: white;
+                    font-size: 1.5rem;
+                    transition: transform 0.3s, color 0.3s;
+
+                    &:hover {
+                        color: #003366;
+                        /* navy blue */
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        text-align: center;
+        padding-top: 1rem;
+        margin-top: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+
+        p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+    }
+}

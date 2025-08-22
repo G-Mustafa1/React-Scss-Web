@@ -1,0 +1,35 @@
+@use "variables" as *;
+@use "mixins";
+
+.about {
+  .intro {
+    padding: 4rem 2rem;
+    background: #fafafa;
+    text-align: center;
+
+    h1 {
+      font-size: 2.5rem;
+      color: $primary-color;
+    }
+  }
+
+  .team {
+    padding: 4rem 2rem;
+    text-align: center;
+
+    .team-members {
+      display: flex;
+      justify-content: center;
+        flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 2rem;
+
+      .member {
+        padding: 1.5rem;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+}
